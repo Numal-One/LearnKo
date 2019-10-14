@@ -27,6 +27,7 @@
     }
 
     echo "после оптимизации условий - ".(microtime(true) - $start).' <br>';
+    // 0.0016400814056396
     echo $outStr;
     
 
