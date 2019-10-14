@@ -7,6 +7,7 @@
   <title>Document</title>
 </head>
 <body>
+<a href='index2.php'>Ко второму варианту </a>
   <div>
   <?php  
     // создаем временную метку начала программы
@@ -42,6 +43,7 @@
     }
 
     echo "C break и половинным проходом во втором цикле - ".(microtime(true) - $start).' <br>';
+    // 0.0015959739685059
     echo $outStr;
 
 
@@ -68,8 +70,9 @@
     }
     
     echo "Без break но с половинным проходом во втором цикле - ".(microtime(true) - $start).' <br>';
-
+    // 0.009443998336792
     echo '<br><br>';
+
     $start = microtime(true);
     $firNumb = 0;
     $secNumb = 1000;
@@ -91,6 +94,7 @@
     }
     
     echo "Без break и с целым проходом во втором цикле - ".(microtime(true) - $start).' <br>';
+    // 0.012977123260498
   ?>
   </div>
   
