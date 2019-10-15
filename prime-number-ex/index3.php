@@ -21,6 +21,7 @@
       $count = count($outArr);
       for($j = 0; $j < $count; $j++) {
         if(($i % $outArr[$j]) === 0) {
+          // тут убрал 1 строку кода за счет continue(2)
           continue(2);
         }
       }
