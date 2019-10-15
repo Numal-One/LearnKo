@@ -7,32 +7,24 @@
   <title>Document</title>
 </head>
 <body>
-<a href='index.php'>к первому варианту</a>
+<a href='index.php'>к 1 варианту</a> <br>
+<a href='index3.php'>ко 3 варианту</a> <br>
   <div>
 
   <?php  
     $start = microtime(true);
-    $outStr = '1 ';
+    $outStr = '';
 
     for ($i = 2; $i < 1001; $i++) {
-      $isThis = $i.' ';
-      for($j = 2; $j < ($i)/2; $j++) {
-
-        if(($i % $j) === 0) {
-          $isThis = '';
-          break;
-        }
+      for($j = 2; $j <= ($i)/2; $j++) {
+        if(($i % $j) === 0) continue(2);
       }
-      $outStr = $outStr.$isThis;
+      $outStr = $outStr.$i.' ';
     }
 
     echo "после оптимизации условий - ".(microtime(true) - $start).' <br>';
     // 0.0016400814056396
     echo $outStr;
-    
-
-
-
     
   ?>
   </div>
